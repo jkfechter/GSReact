@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSX Exercises</title>
+    
+</head>
+<body>
+    <div id='root'></div>
+    <div id='rootb'></div>
+    <script type="text/babel">
+        const shoppingList = ['apples', 'avocados', 'bananas', 'kiwis'];
+        const listItems = shoppingList.map((item) => 
+            <li>{item}</li>
+        );
+
+        ReactDOM.render(
+            <ul>{listItems}</ul>,
+            document.getElementById('root')
+        );
+    </script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const shoppingList = ['mediation', 'coding', 'yoga', 'scuba'];
+        const listItems = shoppingList.map((item) => 
+            <li>{item} is the best</li>
+        );
+
+        ReactDOM.render(
+            <ul>{listItems}</ul>,
+            document.getElementById('rootb')
+        );
+    </script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</body>
+</html>
